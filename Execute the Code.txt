@@ -1,0 +1,10 @@
+How to Execute the Code:
+
+To run the entire pipeline, follow these steps precisely:
+First, ensure that all the required Python libraries are installed.
+
+Next, load your PolSAR dataset into the variable PolSAR, the ground truth map into gt, and define the training and testing sample coordinates in centers and all_centers, respectively. You should also define the patch sizes for feature extraction.
+
+After setting up all input data, make sure the entire script — including dataset preparation, the self-supervised model training, feature extraction, feature selection, and the final SVM or RF classification — is placed inside a Python script or notebook. At the end of the script, call the main() function.
+
+The script will automatically execute each step, starting from patch difficulty ranking using deep curriculum learning, through multi-scale feature extraction and feature fusion, to final classification using an ensemble of SVM or RF models. The process concludes by displaying the classified map and reporting classification accuracy metrics.

@@ -1,0 +1,26 @@
+Data Generation Method
+
+Synthetic PolSAR Data:
+
+Image dimensions are set to 100×100 pixels with 20 bands
+
+Data values are randomly generated between 0 and 1 
+
+This simulates a simple polarimetric image without real-world complex characteristics
+
+
+Ground Truth Map (GTM):
+
+Has the same dimensions as the main image (100×100)
+
+Contains random integer values between 1 and 5 (representing 5 classes)
+
+Serves as a simulated classification reference for testing purposes
+
+
+
+Purpose:
+This synthetic data is simple and unrealistic, designed specifically for:
+
+Algorithm verification
+Testing basic functionality of classification and processing methods
