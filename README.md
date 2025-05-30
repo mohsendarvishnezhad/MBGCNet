@@ -39,13 +39,6 @@ MBGCNet/
 └── README.md          # Documentation
 ```
 
-## ⚙️ Installation
-
-```bash
-pip install -r requirements.txt
-```
-
-> Optional: Use a virtual environment or `conda` for isolation.
 
 ## 🧪 Usage
 
@@ -63,7 +56,7 @@ python Model Evaluation.py
 ## 📊 Performance
 
 MBGCNet was evaluated on multiple PolSAR datasets (e.g., Flevoland-15, San Francisco-5), achieving **remarkable classification accuracy and robustness**.
-
+Flevoland-15
 | Model     | Overall Accuracy | Kappa | Params (M) | FLOPs (M) |
 |-----------|------------------|--------|------------|-----------|
 | MBGCNet   | **98.83%**       | 98.46  | 1.31       | 3.24      |
@@ -72,7 +65,7 @@ MBGCNet was evaluated on multiple PolSAR datasets (e.g., Flevoland-15, San Franc
 
 > 📈 Full quantitative results, ablations, and visualizations are presented in the paper.
 
-## 🔧 Requirements
+## 🔧 Requirements and  Installation
 
 - Python ≥ 3.8  
 - PyTorch ≥ 1.10  
@@ -82,6 +75,7 @@ MBGCNet was evaluated on multiple PolSAR datasets (e.g., Flevoland-15, San Franc
 Install them using:
 ```bash
 pip install -r requirements.txt
+Optional: Use a virtual environment or `conda` for isolation.
 ```
 
 ## 📖 Citation
