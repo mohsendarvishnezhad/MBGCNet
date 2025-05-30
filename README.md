@@ -8,7 +8,7 @@
 > 🔬 **Proposed in**:  
 > *MBGCNet: A Novel Fusion of Mini-Batch Graph Convolutional Network and Convolutional Neural Network for PolSAR Image Classification*  
 > [Mohsen Darvishnezhad and M.Ali Sebt] · [K.N.Toosi University of Technology, Tehran, Iran], 2025. 
-> *(Preprint or publication link if available)*
+> 
 
 ## 🚀 Highlights
 
