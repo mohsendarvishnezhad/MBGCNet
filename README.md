@@ -42,8 +42,6 @@ MBGCNet/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/MBGCNet.git
-cd MBGCNet
 pip install -r requirements.txt
 ```
 
@@ -51,14 +49,15 @@ pip install -r requirements.txt
 
 ## 🧪 Usage
 
-### Train the model:
+### Train and Test the model:
 ```bash
-python train.py --config config.yaml
+python MBGCNet-MPS.py
+python MBGCNet-SPS.py
 ```
 
-### Evaluate on test data:
+### Evaluate the Hyper-Parameters:
 ```bash
-python test.py --checkpoint checkpoints/mbgcnet_best.pth
+python Model Evaluation.py
 ```
 
 ## 📊 Performance
