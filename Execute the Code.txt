@@ -1,10 +1,68 @@
-How to Execute the Code:
 
-To run the entire pipeline, follow these steps precisely:
-First, ensure that all the required Python libraries are installed.
+# MBGCNet-MPS: PolSAR Image Classification
 
-Next, load your PolSAR dataset into the variable PolSAR, the ground truth map into gt, and define the training and testing sample coordinates in centers and all_centers, respectively. You should also define the patch sizes for feature extraction.
+This repository contains the implementation of **MBGCNet-MPS**, a hybrid deep learning framework combining CNN and Mini-Batch Graph Convolutional Network (MB-GCN) for PolSAR (Polarimetric Synthetic Aperture Radar) image classification.
 
-After setting up all input data, make sure the entire script — including dataset preparation, the self-supervised model training, feature extraction, feature selection, and the final SVM or RF classification — is placed inside a Python script or notebook. At the end of the script, call the main() function.
+---
 
-The script will automatically execute each step, starting from patch difficulty ranking using deep curriculum learning, through multi-scale feature extraction and feature fusion, to final classification using an ensemble of SVM or RF models. The process concludes by displaying the classified map and reporting classification accuracy metrics.
+## How to Run the Code
+
+### 1. Prerequisites
+
+- Python 3.7 or higher
+- Required Python packages:
+  - `torch`
+  - `numpy`
+  - `scipy`
+  - `matplotlib`
+  - `scikit-learn`
+  - `seaborn`
+  - `tqdm`
+
+You can install all required packages via pip:
+
+```bash
+pip install torch numpy scipy matplotlib scikit-learn seaborn tqdm
+```
+
+### 2. Data Preparation
+
+Prepare your PolSAR data as spatial patches saved in a `.mat` file. The `.mat` file should contain two variables:
+
+- `patches`: a NumPy array of shape `[num_samples, num_channels, patch_size, patch_size]`
+- `labels`: a 1D array containing class labels for each sample
+
+Make sure your data is formatted accordingly before running the code.
+
+### 3. Configure Data Path
+
+In the main Python script (`MBGCNet_MPS.py`), locate the section:
+
+```python
+if __name__ == '__main__':
+    data_path = 'path/to/your/polsar_patches.mat'
+```
+
+Replace `'path/to/your/polsar_patches.mat'` with the actual path to your `.mat` data file.
+
+### 4. Run the Script
+
+Execute the script in your terminal or command prompt:
+
+```bash
+python MBGCNet_MPS.py
+```
+
+The training process will start, and after each epoch, you will see the training progress and accuracy printed in the console.
+
+### 5. GPU Usage (Optional)
+
+If a CUDA-compatible NVIDIA GPU is available and PyTorch detects it, the code will automatically utilize the GPU for faster training.
+
+---
+
+## Notes
+
+- To train the model on your own data, adjust the data path and ensure the data format matches the expected input.
+- You can modify training parameters such as batch size, number of epochs, and learning rate by editing the script.
+- For any issues or questions, feel free to contact or open an issue in the repository.
